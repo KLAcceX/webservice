@@ -1,1 +1,26 @@
-<p>add works!</p>
+<div class="row">
+	<form [formGroup]="alunoForm" (ngSubmit)="submit()" class="form form-register">
+		<div class="form-field">
+			<label for="nome">
+				Nome
+			</label>
+			<input id="nome" type="text" name="nome" class="form-control" formControlName="nome"/>
+		</div>
+		<div class="form-field">
+			<label for="sexo">
+				Sexo
+			</label>
+			<input id="sexo" type="text" name="sexo" class="form-control" formControlName="sexo" />
+		</div>
+		<div class="form-field">
+			<label for="dataNascimento">
+				Data de Nascimento
+			</label>
+			<input id="dataNascimento" type="date" name="dataNascimento" class="form-control" formControlName="dataNascimento" />
+		</div>
+		<br/>
+		<div class="form-field">
+			<button class="btn btn-primary" type="submit" [disabled]="!alunoForm.valid">Adicionar</button>
+		</div>
+	</form>
+</div>

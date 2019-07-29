@@ -1,42 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-//import { FlexLayoutModule } from '@angular/flex-layout';
-
-import {
-  MatButtonModule,
-  MatDividerModule,
-  MatIconModule,
-  MatMenuModule,
-  MatProgressSpinnerModule,
-  MatTableModule,
-  MatToolbarModule
-} from '@angular/material';
-
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
+
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { DirectivesModule } from './directives/directives.module';
+import { AlunoModule } from './modules/aluno/aluno.module';
+
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    FlexLayoutModule,
-    MatToolbarModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    MatTableModule,
-    MatDividerModule,
-    MatProgressSpinnerModule,
-    FormsModule,
+    AlunoModule,
+    DirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

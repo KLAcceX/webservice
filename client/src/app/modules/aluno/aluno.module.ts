@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DisplayComponent } from './components/display/display.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+import { AlunoRoutingModule } from './aluno-routing.module';
+
 import { AddComponent } from './components/add/add.component';
-import { IndexComponent } from './components/index/index.component';
+import { ListComponent } from './components/list/list.component';
+import { ViewComponent } from './components/view/view.component';
 
-
+import { DirectivesModule } from '../../directives/directives.module';
 
 @NgModule({
-  declarations: [DisplayComponent, AddComponent, IndexComponent],
+  declarations: [ViewComponent, AddComponent, ListComponent, ViewComponent ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    AlunoRoutingModule,
+    DirectivesModule
   ]
 })
 export class AlunoModule { }

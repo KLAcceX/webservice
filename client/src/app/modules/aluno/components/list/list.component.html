@@ -1,0 +1,40 @@
+<div class="table-wrapper">
+	<div class="table-title">
+		<div class="row">
+			<div class="col-sm-8">
+				<h2>Gerenciar <b>Alunos</b></h2>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" class="btn btn-primary add-btn" routerLink="/alunos/add"><span octicon="plus" color="white"></span> Adicionar</button>
+			</div>
+		</div>
+	</div>
+	<div class="col-12">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>R.A.</th>
+					<th>Nome</th>
+					<th>Sexo</th>
+					<th>Idade</th>
+					<th>Data de Nascimento</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let aluno of alunos">
+					<td>{{ aluno.ra }}</td>
+					<td>{{ aluno.nome }}</td>
+					<td>{{ aluno.sexo }}</td>
+					<td>{{ aluno.idade + ' ano' + (aluno.idade > 1 ? 's' : '')}}</td>
+					<td>{{ aluno.dataNascimento | date: 'dd/MM/yyyy' }}</td>
+					<td>
+						<button type="button" class="btn btn-info view-btn" [routerLink]="['/alunos/view', aluno.ra]"><span octicon="eye" color="white"></span></button>
+						<button type="button" class="btn btn-warning edit-btn" [routerLink]="['/alunos/add', aluno.ra]"><span octicon="pencil" color="white"></span></button>
+						<button type="button" class="btn btn-danger delete-btn"><span octicon="trashcan" color="white"></span></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

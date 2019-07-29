@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+	padding: 20px;
+}
+
+.table-title {
+	margin-top: 15px;
+	background: #3BA;
+	color: #fff;
+	padding: 16px 30px;
+	border-radius: 5px 5px 0 0;	
+	
+	h2 {
+		margin: 6px 0 0;
+    	font-size: 22px;
+	}
+
+	.add-btn {
+		float: right;
+		height: 30px;
+		font-weight: bold;
+		font-size: 15px;
+		text-shadow: none;
+		min-width: 100px;
+		border-radius: 50px;
+		line-height: 15px;
+	}
+}
+
+.tb-edit-btn, .tb-delete-btn, .tb-view.btn {
+	margin-right: 10px;
+	height: 10px;
+	font-weight: bold;
+	text-shadow: none;
+	min-width: 100px;
+	border-radius: 5px;
+}
